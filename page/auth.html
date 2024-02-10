@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./../src/css/output.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
+<body style="background: url('./../src/img/Picture1.png');" class="bg-cover">
     <!-- Heder -->
     <header id="header" class="bg-transparent absolute top-0 left-0 w-full flex flex-col items-center z-10">
         <div class="container">
@@ -41,14 +41,15 @@
     </header>
 
     <!-- Form -->
-    <div class="container flex flex-col justify-center items-center mt-10">
+    <div class="container flex flex-col justify-center items-center mt-10 min-h-screen mb-10" 
+    data-aos="zoom-in">
         <div class="mt-4 flex gap-3">
-            <button id="btn-login" class=" border-primary border-2 py-1 px-4 m-0  rounded-t-lg">Login</button>
-            <button id="btn-register" class=" border-primary border-2 py-1 px-4 m-0  rounded-t-lg">Register</button>
+            <button id="btn-login" class=" py-1 px-4 m-0  rounded-t-lg bg-slate-700 font-semibold text-white hover:bg-slate-700 hover:text-white duration-500">Login</button>
+            <button id="btn-register" class="py-1 px-4 m-0 font-semibold rounded-t-lg hover:bg-slate-700 hover:text-white duration-500">Register</button>
         </div>
         <div class="w-full max-w-md mx-auto">
             <div id="login" class="">
-                <form action="" class="flex flex-col" data-aos="zoom-in">
+                <form action="" class="flex flex-col">
                     <div class="border border-primary py-10 px-10 rounded-md shadow-lg">
 
                         <label for="email" class="flex flex-col my-2">
@@ -71,8 +72,8 @@
                 </form>
             </div>
             <div id="register" class="hidden">
-                <form action="" class="flex flex-col" data-aos="zoom-in">
-                    <div class="border border-primary py-10 px-10 rounded-md shadow-lg">
+                <form action="" class="flex flex-col">
+                    <div class="border border-slate-700 py-10 px-10 rounded-md shadow-lg">
 
                         <label for="email" class="flex flex-col my-2">
                             <span class="font-bold text-orange-500 px-3">Email</span>
@@ -157,16 +158,16 @@
         const btn_register = document.getElementById('btn-register');
 
         btn_login.addEventListener('click', () =>{
-            btn_login.classList.add('bg-red-500');
+            btn_login.classList.add('text-white','bg-slate-700');
             login.classList.remove('hidden');
             register.classList.add('hidden');
-            btn_register.classList.remove('bg-red-500');
+            btn_register.classList.remove('text-white','bg-slate-700');
         })
         btn_register.addEventListener('click', () =>{
-            btn_register.classList.add('bg-red-500');
+            btn_register.classList.add('text-white','bg-slate-700');
             login.classList.add('hidden');
             register.classList.remove('hidden');
-            btn_login.classList.remove('bg-red-500');
+            btn_login.classList.remove('text-white','bg-slate-700');
         })
 
     </script>
