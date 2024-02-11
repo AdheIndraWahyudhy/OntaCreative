@@ -22,7 +22,7 @@
                     <span class="humberger-line transition duration-300 ease-in-out origin-bottom-left"></span>
                 </button>
                 <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full  border transition duration-1000 ease-in-out lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:border-none">
-                    <ul class="block lg:flex">
+                    <ul class="block lg:flex text-black lg:text-white  lg:items-center lg:gap-5" id="nav-ul">
                         <li class="group">
                             <a href="" class="group-hover:text-primary text-base py-2 mx-8 flex">Beranda</a>
                         </li>
@@ -30,7 +30,10 @@
                             <a href="" class="group-hover:text-primary text-base py-2 mx-8 flex">Testimoni</a>
                         </li>
                         <li class="group">
-                            <a href="" class="group-hover:text-primary text-base py-2 mx-8 flex">About us</a>
+                            <a href="" class="group-hover:text-primary text-base py-2 mx-8 inline-block w-full">Tentang Kami</a>
+                        </li>
+                        <li class="w-full my-4 lg:my-0 ">
+                            <a href="" class="py-2 px-4 mx-8 bg-slate-700 text-white font-semibold rounded-full hover:bg-slate-900">Masuk</a>
                         </li>
                     </ul>
                 </nav>
@@ -41,22 +44,22 @@
     </header>
 
     <!-- Hero section -->
-    <section id="home" class="pt-36">
+    <section id="home" class="py-36 bg-[url('/src/img/Picture2.png')] bg-cover bg-center">
         <div class="container">
             <div class="flex flex-wrap md:justify-center">
                 <div class="self-center px-4 lg:w-1/2 " data-aos="fade-right">
-                    <h1 class="text-base font-semibold text-black md:text-xl lg:2xl">
+                    <h1 class="text-base font-semibold text-white md:text-xl lg:2xl">
                         Hallo Semua 👋, Kami <span class="block font-bold text-4xl text-primary lg:text-5xl">ONTA Creative</span> 
                     </h1>
-                    <h2 class="font-medium text-slate-700 mb-5">Open your mind and build success</h2>
-                    <p class="font-medium text-slate-700 mb-10">Bantu kamu untuk promosi jualan<br>Foto produk, Vidio promosi, Editing, dan Design </p>
+                    <h2 class="font-medium text-white mb-5">Open your mind and build success</h2>
+                    <p class="font-medium text-white mb-10">Bantu kamu untuk promosi jualan<br>Foto produk, Vidio promosi, Editing, dan Design </p>
                     <a href="#" class="px-5 py-3 bg-primary rounded-full text-white hover:shadow-lg hover:bg-orange-400 duration-300 ease-in-out">
                         Hubungi Kami
                     </a>
                 </div>
                 <div class="self-end px-4  ">
                     <div class="relative mt-28 md:mt-10 " data-aos="fade-up">
-                        <img src="./../src/img/gambarDepan.svg" alt="" class="max-w-full md:max-w-sm mx-auto">
+                        <img src="./../src/img/undraw-picture1.svg" alt="" class="max-w-full md:max-w-sm mx-auto bg-white bg-opacity-75 p-5 rounded-xl">
                         <!-- <span class="absolute w-full bottom-0 -z-10 md:items-center md:max-w-sm lg:w-1/2 lg:translate-x-1/2">
                             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#FF0066" d="M51.7,-66.5C63.3,-51.9,66.4,-32.1,63.4,-16C60.4,0,51.4,12.2,42,20.2C32.6,28.2,22.8,32,11.2,40.2C-0.3,48.4,-13.6,61.1,-28.7,62.6C-43.8,64.1,-60.7,54.4,-71.5,39.5C-82.3,24.5,-87.1,4.1,-79.5,-9.7C-72,-23.6,-52.1,-30.9,-36.7,-44.9C-21.4,-58.9,-10.7,-79.4,4.7,-85C20.1,-90.5,40.1,-81.1,51.7,-66.5Z" transform="translate(100 100)" />
@@ -70,7 +73,7 @@
     </section>
 
     <!-- Price list produk -->
-    <div class=" border py-10 bg-primary mt-20">
+    <div class="py-10 bg-primary">
         <h2 class="font-bold text-center text-3xl border-b-2 max-w-fit mx-auto text-white mb-8">Price List Produk</h2>
         <div class="flex flex-wrap justify-center">
             <div class="card border w-full max-w-64 mx-5 rounded-lg shadow-lg my-4 relative bg-white" data-aos="fade-up">
@@ -140,12 +143,40 @@
     </div>
 
     <!-- About me -->
-    <div class="container flex flex-col justify-center items-center md:flex-row py-10">
-        <img src="./../src/img/03june22_camera_icon_03-removebg-preview.png" alt="" class=" mx-auto" data-aos="zoom-in">
+    <h2 id="#tentang-kami" class="mx-auto pt-10 font-bold text-2xl text-primary border-b-4 border-slate-700 w-fit">Tentang <span class="text-black">Kami</span></h2>
+    <div class="container flex flex-col justify-center items-center md:flex-row py-10 gap-20">
+        <img src="./../src/img/gambarDepan.svg" alt="" class=" mx-auto max-w-sm" data-aos="zoom-in">
         <div data-aos="zoom-in">
             <h2 class="text-center text-black text-2xl font-bold">ONTA <span class="text-primary">Creative</span></h2>
             <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, laudantium sequi beatae eos dolorem mollitia accusamus quia earum debitis dolores veniam, inventore, laborum vel autem libero quis qui necessitatibus a!</p>
         </div>
+    </div>
+
+    <!-- Team -->
+    <h2 id="#tim" class="mx-auto pt-10 font-bold text-2xl text-black border-b-4 border-slate-700 w-fit">Tim <span class="text-primary">Onta </span>Creative</h2>
+    <div class="container py-10 flex justify-center flex-wrap gap-5 w-full ">
+        <div class="w-72 max-w-sm rounded overflow-hidden shadow-lg" data-aos="fade-up">
+            <img class="w-full h-52 object-cover" src="./src/img/team/risqa.jpg" alt="Gambar Profil">
+            <div class="px-6 py-4 bg-white">
+                <div class="font-bold text-xl mb-2">Risqa</div>
+                <p class="text-gray-700 text-base">Finance Departement</p>
+            </div>
+        </div>
+        <div class="w-72 max-w-sm rounded overflow-hidden shadow-lg" data-aos="fade-up">
+            <img class="w-full h-52 object-cover" src="./src/img/team/yunus.jpg" alt="Gambar Profil">
+            <div class="px-6 py-4 bg-white">
+                <div class="font-bold text-xl mb-2">Muhammad Yunus</div>
+                <p class="text-gray-700 text-base">Creative Director</p>
+            </div>
+        </div>
+        <div class="w-72 max-w-sm rounded overflow-hidden shadow-lg" data-aos="fade-up">
+            <img class="w-full h-52 object-cover" src="./src/img/team/yunus.jpg" alt="Gambar Profil">
+            <div class="px-6 py-4 bg-white">
+                <div class="font-bold text-xl mb-2">Muhammad Yunus</div>
+                <p class="text-gray-700 text-base">Creative Director</p>
+            </div>
+        </div>
+
     </div>
 
     <!-- Footer -->
@@ -192,7 +223,8 @@
     <script>
         AOS.init({
             duration: 1000,
-            offset: 200
+            offset: 200,
+            once: true,
         });
     </script>
 </body>

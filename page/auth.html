@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./../src/css/output.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body style="background: url('./../src/img/Picture1.png');" class="bg-cover">
+<body>
+    
     <!-- Heder -->
     <header id="header" class="bg-transparent absolute top-0 left-0 w-full flex flex-col items-center z-10">
         <div class="container">
@@ -17,12 +18,12 @@
                 </div>
                 <div class="flex items-center justify-center px-4">
                 <button id="humberger" name="humberger" class="block absolute right-4 lg:hidden">
-                    <span class="humberger-line transition duration-300 ease-in-out origin-top-left"></span>
-                    <span class="humberger-line transition duration-300 ease-in-out"></span>
-                    <span class="humberger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    <span class="humberger-line transition duration-300 ease-in-out origin-top-left bg-white"></span>
+                    <span class="humberger-line transition duration-300 ease-in-out bg-white"></span>
+                    <span class="humberger-line transition duration-300 ease-in-out origin-bottom-left bg-white"></span>
                 </button>
                 <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full  border transition duration-1000 ease-in-out lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none lg:border-none">
-                    <ul class="block lg:flex">
+                    <ul class="block lg:flex text-black lg:text-white  lg:items-center lg:gap-5" id="nav-ul">
                         <li class="group">
                             <a href="" class="group-hover:text-primary text-base py-2 mx-8 flex">Beranda</a>
                         </li>
@@ -30,7 +31,10 @@
                             <a href="" class="group-hover:text-primary text-base py-2 mx-8 flex">Testimoni</a>
                         </li>
                         <li class="group">
-                            <a href="" class="group-hover:text-primary text-base py-2 mx-8 flex">About us</a>
+                            <a href="" class="group-hover:text-primary text-base py-2 mx-8 inline-block w-full">Tentang Kami</a>
+                        </li>
+                        <li class="w-full my-4 lg:my-0 ">
+                            <a href="" class="py-2 px-4 mx-8 bg-slate-700 text-white font-semibold rounded-full hover:bg-slate-900">Masuk</a>
                         </li>
                     </ul>
                 </nav>
@@ -39,29 +43,29 @@
             
         </div>
     </header>
-
+    
     <!-- Form -->
-    <div class="container flex flex-col justify-center items-center mt-10 min-h-screen mb-10" 
-    data-aos="zoom-in">
+    <div class=" flex flex-col justify-center items-center pt-10 min-h-screen pb-10 bg-[url('/src/img/Picture2.png')] bg-cover bg-center">
         <div class="mt-4 flex gap-3">
-            <button id="btn-login" class=" py-1 px-4 m-0  rounded-t-lg bg-slate-700 font-semibold text-white hover:bg-slate-700 hover:text-white duration-500">Login</button>
-            <button id="btn-register" class="py-1 px-4 m-0 font-semibold rounded-t-lg hover:bg-slate-700 hover:text-white duration-500">Register</button>
+            <button id="btn-login" class=" py-1 px-4 m-0  rounded-t-lg font-semibold text-black hover:bg-slate-700 hover:text-white duration-500 bg-white bg-opacity-65">Login</button>
+            <button id="btn-register" class="py-1 px-4 m-0 font-semibold rounded-t-lg hover:bg-slate-700 text-white hover:text-white duration-500 bg-opacity-65">Register</button>
         </div>
         <div class="w-full max-w-md mx-auto">
+            <!-- Form Login -->
             <div id="login" class="">
                 <form action="" class="flex flex-col">
-                    <div class="border border-primary py-10 px-10 rounded-md shadow-lg">
+                    <div class=" py-10 px-10 rounded-md shadow-lg bg-white bg-opacity-65">
 
                         <label for="email" class="flex flex-col my-2">
-                            <span class="font-bold text-orange-500 px-3">Email</span>
-                            <input type="email" name="email" id="email" placeholder="you@example.com" class="py-2 px-3 bg-white border border-orange-300 rounded-md text-sm shadow-sm placeholder-orange-400
+                            <span class="font-bold text-black px-3">Email</span>
+                            <input type="email" name="email" id="email" placeholder="you@example.com" class="py-2 px-3 bg-white opacity-90 border border-orange-300 rounded-md text-sm shadow-sm placeholder-orange-400
                             focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary
                             disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
                             invalid:border-red-500 invalid:text-red-600
                             focus:invalid:border-red-500 focus:invalid:ring-red-500">
                         </label>
                         <label for="password" class="flex flex-col my-2">
-                            <span class="font-bold text-orange-500 px-3">Password</span>
+                            <span class="font-bold text-black px-3">Password</span>
                             <input type="password" name="password" id="password" placeholder="Password" class="border border-orange-300 rounded-lg px-3 py-2 placeholder-orange-400 text-sm shadow-sm">
                         </label>
                     </div>
@@ -71,12 +75,13 @@
                     </div>
                 </form>
             </div>
+            <!-- form register -->
             <div id="register" class="hidden">
                 <form action="" class="flex flex-col">
-                    <div class="border border-slate-700 py-10 px-10 rounded-md shadow-lg">
+                    <div class=" py-10 px-10 rounded-md shadow-lg  bg-white bg-opacity-65">
 
                         <label for="email" class="flex flex-col my-2">
-                            <span class="font-bold text-orange-500 px-3">Email</span>
+                            <span class="font-bold text-black px-3">Email</span>
                             <input type="email" name="email" id="email" placeholder="you@example.com" class="py-2 px-3 bg-white border border-orange-300 rounded-md text-sm shadow-sm placeholder-orange-400
                             focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary
                             disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
@@ -84,22 +89,22 @@
                             focus:invalid:border-red-500 focus:invalid:ring-red-500">
                         </label>
                         <label for="nama" class="flex flex-col my-2">
-                            <span class="font-bold text-orange-500 px-3">Nama Lengkap</span>
+                            <span class="font-bold text-black px-3">Nama Lengkap</span>
                             <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" class="py-2 px-3 bg-white border border-orange-300 rounded-md text-sm shadow-sm placeholder-orange-400
                             focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
                         </label>
                         <label for="alamat" class="flex flex-col my-2">
-                            <span class="font-bold text-orange-500 px-3">Alamat</span>
+                            <span class="font-bold text-black px-3">Alamat</span>
                             <input type="text" id="alamat" name="alamat" placeholder="Alamat" class="py-2 px-3 bg-white border border-orange-300 rounded-md text-sm shadow-sm placeholder-orange-400
                             focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
                         </label>
                         <label for="nomor-hp" class="flex flex-col my-2">
-                            <span class="font-bold text-orange-500 px-3">Nomor Hp(WhatssApp)</span>
+                            <span class="font-bold text-black px-3">Nomor Hp(WhatssApp)</span>
                             <input type="text" id="nomor-hp" name="nomor-hp" placeholder="Nomor Hp" class="py-2 px-3 bg-white border border-orange-300 rounded-md text-sm shadow-sm placeholder-orange-400
                             focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
                         </label>
                         <label for="password" class="flex flex-col my-2">
-                            <span class="font-bold text-orange-500 px-3">Password</span>
+                            <span class="font-bold text-black px-3">Password</span>
                             <input type="password" name="password" id="password" placeholder="Password" class="border border-orange-300 rounded-lg px-3 py-2 placeholder-orange-400 text-sm shadow-sm">
                         </label>
                     </div>
@@ -158,16 +163,20 @@
         const btn_register = document.getElementById('btn-register');
 
         btn_login.addEventListener('click', () =>{
-            btn_login.classList.add('text-white','bg-slate-700');
+            btn_login.classList.add('text-black','bg-white');
+            btn_login.classList.remove('text-white');
             login.classList.remove('hidden');
             register.classList.add('hidden');
-            btn_register.classList.remove('text-white','bg-slate-700');
+            btn_register.classList.remove('text-black','bg-white');
+            btn_register.classList.add('text-white');
         })
         btn_register.addEventListener('click', () =>{
-            btn_register.classList.add('text-white','bg-slate-700');
+            btn_register.classList.add('text-black','bg-white');
+            btn_register.classList.remove('text-white');
             login.classList.add('hidden');
             register.classList.remove('hidden');
-            btn_login.classList.remove('text-white','bg-slate-700');
+            btn_login.classList.remove('text-black','bg-white');
+            btn_login.classList.add('text-white');
         })
 
     </script>
